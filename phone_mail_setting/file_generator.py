@@ -20,4 +20,6 @@ def generate_txt(email, incoming_server, incoming_account, incoming_password, ou
 
     file_path = filedialog.asksaveasfilename(defaultextension=".txt", filetypes=[("Text files", "*.txt")])
     if file_path:
-        with open(file_path, "w
+        with open(file_path, "w") as file:
+            file.write(content)
+        messagebox.showinfo("Success", "TXT file generated successfully!")
