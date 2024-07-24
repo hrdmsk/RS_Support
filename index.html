@@ -13,14 +13,28 @@
     </div>
     <div class="container">
         <h1>Email and Server Information</h1>
+
         <label for="email">Email Address:</label>
         <input type="text" id="email" name="email">
         <br>
         <label for="server">Server Information:</label>
         <input type="text" id="server" name="server">
         <br>
-        <button id="save">Save to TXT</button>
-        <bucontainercreate-draft">Create Outlook Draft</button>
+
+        <div class="exports">
+            <ul>
+                <li>
+                    <div class="exports_mailsend">
+                        <button id="save">Save Txt</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="exports_txt">
+                        <button id="create_draft">Send mail</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
     
         <script src="renderer.js"></script>
     </div>
