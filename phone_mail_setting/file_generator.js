@@ -1,7 +1,7 @@
-const { ipcRenderer } = require('electron');
 const fs = require('fs');
 
-document.getElementById('save').addEventListener('click', () => {
+// Save to TXT file
+function saveToTxt() {
     const email = document.getElementById('email').value;
     const server = document.getElementById('server').value;
     const data = `Email: ${email}\nServer: ${server}`;
@@ -13,4 +13,6 @@ document.getElementById('save').addEventListener('click', () => {
             console.log('File saved successfully');
         }
     });
-});
+}
+
+document.getElementById('save').addEventListener('click', saveToTxt);
